@@ -1,4 +1,5 @@
-﻿using FactoryMethodPattern.ConcreteCreator;
+﻿using BuilderPattern.ComputerSample.ConcreteBuilder;
+using FactoryMethodPattern.ConcreteCreator;
 using FactoryMethodPattern.ProductInterface;
 using FactoryPattern.Payments;
 using FactoryPattern.Vehicles;
@@ -29,6 +30,14 @@ namespace ConsoleMain
             #region SingletonSample
             SingletonDemo.Current.Message = "This is singleton";
             SingletonDemo.Current.Print();
+            #endregion
+
+            #region BuilderPattern
+            var gamingComputer = new GamingComputerBuilder().Build();
+            Console.WriteLine(gamingComputer.ToString());
+
+            var officeComputer = new OfficeComputerBuilder().Build();
+            Console.WriteLine(officeComputer.ToString());
             #endregion
 
         }
