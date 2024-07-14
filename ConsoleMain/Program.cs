@@ -2,6 +2,7 @@
 using FactoryMethodPattern.ProductInterface;
 using FactoryPattern.Payments;
 using FactoryPattern.Vehicles;
+using SingletonPattern;
 
 namespace ConsoleMain
 {
@@ -23,6 +24,11 @@ namespace ConsoleMain
             //Documents
             FactoryMethodPatternSample_Documents1();
 
+            #endregion
+
+            #region SingletonSample
+            SingletonDemo.Current.Message = "This is singleton";
+            SingletonDemo.Current.Print();
             #endregion
 
         }
